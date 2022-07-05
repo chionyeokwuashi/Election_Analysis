@@ -66,16 +66,16 @@ with open(file_to_load) as election_data:
 
         # 4a: Write an if statement that checks that the
         # county does not match any existing county in the county list.
-        if candidate_name not in candidate_options:
+        if county_name not in counties:
 
             # 4b: Add the existing county to the list of counties.
             counties.append(county_name)
 
             # 4c: Begin tracking the county's vote count.
-            county_votes[counties] = 0
+            county_votes[county_name] = 0
 
         # 5: Add a vote to that county's vote count.
-        county_votes[counties] += 1
+        county_votes[county_name] += 1
 
 
 # Save the results to our text file.
